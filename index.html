@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kala Point Condominium Association - Welcome Home</title>
+    <meta name="description"
+        content="Welcome to Kala Point, a small, welcoming condominium community surrounded by woodland near the bay.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Playfair Display for headings -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#224251',
+                        secondary: '#88B8A2',
+                        accent: '#EAE0D5',
+                        dark: '#0A0908',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Inter', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+        }
+
+        .arch-image {
+            border-top-left-radius: 50% 100%;
+            border-top-right-radius: 50% 100%;
+            overflow: hidden;
+        }
+
+        .hero-badge {
+            position: relative;
+
+        }
+
+        .hero-badge::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 100%;
+            width: 110px;
+            height: 0.5px;
+            background-color: #22333B;
+        }
+
+        .hero-badge::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 100%;
+            width: 110px;
+            height: 0.5px;
+            background-color: #22333B;
+        }
+    </style>
+</head>
+
+<body class="font-sans text-gray-800 antialiased overflow-x-hidden">
+
+    <header class="w-full bg-white relative z-50 shadow-sm lg:shadow-none">
+        <div class="container mx-auto flex flex-col lg:flex-row items-stretch">
+            <!-- Logo Area -->
+            <div
+                class="py-4 px-4 lg:pr-10 flex items-center justify-between lg:justify-center bg-white lg:min-w-[300px]">
+                <img src="assets/logo-light.jpeg" alt="Kala Point Logo" class="h-16 lg:h-32 w-auto">
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-primary text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Content Area (Top Bar + Nav) -->
+            <div class="flex-1 flex flex-col">
+                <!-- Top Bar with Skewed Edge -->
+                <div class="hidden lg:flex bg-primary text-white py-3 pl-16 pr-6 items-center justify-between text-sm relative"
+                    style="clip-path: polygon(0 0, 100% 0, 100% 100%, 40px 100%); margin-left: -40px;">
+
+                    <div class="flex items-center space-x-4">
+                        <span class="font-medium opacity-90">Social Media:</span>
+                        <div class="flex space-x-3">
+                            <a href="#" class="hover:text-secondary"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="hover:text-secondary"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="hover:text-secondary"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="h-4 w-[1px] bg-white/20 hidden md:block"></div>
+
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope mr-3 opacity-80"></i>
+                        <span class="opacity-90">Email:</span>
+                        <a href="mailto:info@kalapoint.com"
+                            class="ml-2 font-medium hover:text-secondary">info@kalapoint.com</a>
+                    </div>
+
+                    <div class="h-4 w-[1px] bg-white/20 hidden md:block"></div>
+
+                    <div class="flex items-center">
+                        <i class="fas fa-phone-alt mr-3 opacity-80 rotate-90"></i>
+                        <span class="opacity-90 uppercase text-[10px] tracking-wider">CALL US TODAY:</span>
+                        <span class="ml-2 font-bold text-lg">0123-456-7890</span>
+                    </div>
+                </div>
+
+                <!-- Navigation Bar -->
+                <nav id="main-nav"
+                    class="hidden lg:flex flex-1 flex flex-col lg:flex-row items-center justify-center lg:justify-end px-6 space-y-6 lg:space-y-0 lg:space-x-10 py-8 lg:py-0 border-t lg:border-none border-gray-100 bg-white lg:bg-transparent">
+
+                    <!-- Mobile only contact info in nav -->
+                    <div
+                        class="lg:hidden w-full flex flex-col items-center space-y-4 mb-4 border-b border-gray-100 pb-6 uppercase text-xs tracking-widest font-bold text-primary">
+                        <a href="tel:01234567890" class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2 rotate-90 text-secondary"></i> 0123-456-7890
+                        </a>
+                        <a href="mailto:info@kalapoint.com" class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-secondary"></i> info@kalapoint.com
+                        </a>
+                    </div>
+
+                    <a href="#"
+                        class="text-[#9EC5CB] font-semibold border-b-2 border-[#9EC5CB] pb-1 uppercase text-sm tracking-wide">Home</a>
+                    <a href="#"
+                        class="text-gray-800 font-bold hover:text-secondary transition-colors uppercase text-sm tracking-wide text-center">About
+                        Community</a>
+                    <a href="#"
+                        class="text-gray-800 font-bold hover:text-secondary transition-colors uppercase text-sm tracking-wide text-center">Board
+                        of Directors</a>
+                    <a href="#"
+                        class="text-gray-800 font-bold hover:text-secondary transition-colors uppercase text-sm tracking-wide text-center">Newsletters</a>
+                    <a href="#"
+                        class="bg-secondary text-white px-8 py-4 lg:py-3 font-bold hover:bg-secondary/90 transition-all uppercase text-sm tracking-widest w-full sm:w-auto text-center">CONTACT
+                        US</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-[600px] lg:h-[750px] pt-10 flex justify-center text-center text-white overflow-hidden">
+        <div class="absolute inset-0 bg-center transition-transform duration-[10s] hover:scale-110"
+            style="background-image: url('assets/hero-bg.jpeg'); background-size: cover; background-position: center;">
+        </div>
+        <!-- <div class="absolute inset-0 bg-black/20 lg:hidden"></div> -->
+        <div class="relative z-10 max-w-4xl px-4  ">
+            <div
+                class="text-primary text-sm md:text-base lg:text-primary px-3 py-1 mb-4 md:mb-6 border-l-[1.5px] inline-block border-r-[1.5px] border-primary hero-badge bg-transparent rounded-sm lg:rounded-none">
+                Quiet Living By The Bay
+            </div>
+            <h2
+                class="text-black lg:text-black font-medium font-serif text-3xl md:text-5xl mb-2 leading-tight drop-shadow-sm lg:drop-shadow-none">
+                WELCOME TO OUR <br class="hidden lg:block"> <span class="font-bold">CONDOMINIUM COMMUNITY</span>
+            </h2>
+            <p class="mb-8 lg:mb-4 text-gray-800 text-sm md:text-base lg:text-black font-medium lg:font-normal">A small,
+                welcoming
+                community
+                surrounded by woodland</p>
+            <a href="#"
+                class="inline-block bg-secondary px-8 py-3 text-white font-medium hover:bg-white hover:text-primary transition-all rounded-sm uppercase tracking-wider shadow-lg">GET
+                A FREE ESTIMATE</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 lg:py-24 px-4 md:px-12 bg-white">
+        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div class="max-w-md mx-auto lg:ml-auto text-center lg:text-left order-2 lg:order-1">
+                <h2 class="text-3xl lg:text-5xl font-serif text-black font-bold mb-6 lg:mb-8 relative">
+                    ABOUT <span class="text-primary">US</span>
+                </h2>
+                <p class="text-primary leading-relaxed mb-8">
+                    Our condominium community is a small and welcoming neighborhood of 77 homes located near the bay and
+                    surrounded by natural woodland.
+                    Whether to enjoy a quiet atmosphere, scenic surroundings, and a strong sense of community.
+                </p>
+
+                <a href="#"
+                    class="bg-secondary text-white px-8 py-3 inline-block hover:opacity-90 transition-opacity rounded-sm font-semibold uppercase tracking-wider">LEARN
+                    MORE</a>
+            </div>
+            <div class="relative order-1 lg:order-2">
+                <div class="h-[300px] lg:h-[500px] max-w-md mx-auto">
+                    <img src="assets/about-deer.png" alt="Wildlife around Kala Point"
+                        class="w-full h-full shadow-lg object-cover rounded-t-full">
+                </div>
+                <!-- Decorative Elements -->
+                <div class="hidden lg:block absolute -bottom-6 -left-6 bg-secondary w-24 h-24 -z-10 opacity-20"></div>
+                <div class="absolute top-4 right-10 lg:top-10 lg:right-20">
+                    <i class="fas fa-dove text-primary text-3xl lg:text-4xl opacity-80"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="py-16 lg:py-20 bg-primary/95 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-center text-3xl lg:text-4xl font-serif mb-12 lg:mb-16 uppercase tracking-widest">
+                COMMUNITY <span class="font-bold">HIGHLIGHTS</span>
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Highlight 1 -->
+                <div class="group relative overflow-hidden h-80 lg:h-96 rounded-lg cursor-pointer">
+                    <img src="assets/highlight-bay.png" alt="Bay View"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300"></div>
+                    <div class="absolute bottom-8 left-6 right-6">
+                        <div
+                            class="w-10 h-10 rounded-full bg-white text-primary border border-white flex items-center justify-center mb-4 backdrop-blur-sm">
+                            <i class="fas fa-anchor text-sm"></i>
+                        </div>
+                        <h3 class="font-medium text-sm flex items-center justify-between uppercase tracking-wider">
+                            Located near the bay
+                            <i
+                                class="fas fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                        </h3>
+                    </div>
+                </div>
+                <!-- Highlight 2 -->
+                <div class="group relative overflow-hidden h-80 lg:h-96 rounded-lg cursor-pointer">
+                    <img src="assets/highlight-residential.png" alt="Peaceful Area"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300"></div>
+                    <div class="absolute bottom-8 left-6 right-6">
+                        <div
+                            class="w-10 h-10 rounded-full bg-white text-primary border border-white flex items-center justify-center mb-4 backdrop-blur-sm">
+                            <i class="fas fa-home text-sm"></i>
+                        </div>
+                        <h3 class="font-medium text-sm flex items-center justify-between uppercase tracking-wider">
+                            Peaceful residential atmosphere
+                            <i
+                                class="fas fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                        </h3>
+                    </div>
+                </div>
+                <!-- Highlight 3 -->
+                <div class="group relative overflow-hidden h-80 lg:h-96 rounded-lg cursor-pointer">
+                    <img src="assets/highlight-woodland.png" alt="Woodland"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300"></div>
+                    <div class="absolute bottom-8 left-6 right-6">
+                        <div
+                            class="w-10 h-10 rounded-full bg-white text-primary border border-white flex items-center justify-center mb-4 backdrop-blur-sm">
+                            <i class="fas fa-tree text-sm"></i>
+                        </div>
+                        <h3 class="font-medium text-sm flex items-center justify-between uppercase tracking-wider">
+                            Quiet woodland surroundings
+                            <i
+                                class="fas fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                        </h3>
+                    </div>
+                </div>
+                <!-- Highlight 4 -->
+                <div class="group relative overflow-hidden h-80 lg:h-96 rounded-lg cursor-pointer">
+                    <img src="assets/highlight-condo.png" alt="Condos"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300"></div>
+                    <div class="absolute bottom-8 left-6 right-6">
+                        <div
+                            class="w-10 h-10 rounded-full bg-white text-primary border border-white flex items-center justify-center mb-4 backdrop-blur-sm">
+                            <i class="fas fa-building text-sm"></i>
+                        </div>
+                        <h3 class="font-medium text-sm flex items-center justify-between uppercase tracking-wider">
+                            37-unit private condominiums
+                            <i
+                                class="fas fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletters Preview -->
+    <section class="py-16 lg:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 lg:mb-16">
+                <h2 class="text-dark font-serif font-medium text-3xl lg:text-4xl mb-2 italic lg:not-italic">LATEST
+                    NEWSLETTER</h2>
+                <h3 class="text-primary font-bold text-3xl lg:text-4xl">PREVIEW</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Newsletter 1 -->
+                <div class="bg-white rounded-md overflow-hidden shadow-lg hover:shadow-md transition-shadow group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="assets/news-1.png" alt="Progress and Planning"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                    </div>
+                    <div class="p-6">
+                        <h4
+                            class="text-primary font-bold mb-3 hover:text-secondary cursor-pointer transition-colors leading-snug">
+                            Gratitude, Progress and Planning for the Year Ahead</h4>
+                        <div class="text-gray-400 text-xs flex items-center mb-4">
+                            <i class="far fa-calendar-alt mr-2"></i> January 2024
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6 line-clamp-3">
+                            Our condominium community is a small and welcoming neighborhood located near the bay and
+                            surrounded by natural woodland...
+                        </p>
+                        <div class="h-[1px] w-full bg-gray-100"></div>
+                    </div>
+                </div>
+
+                <!-- Newsletter 2 -->
+                <div class="bg-white rounded-md overflow-hidden shadow-lg hover:shadow-md transition-shadow group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="assets/news-2.png" alt="Winter Whale Watching"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                    </div>
+                    <div class="p-6">
+                        <h4
+                            class="text-primary font-bold mb-3 hover:text-secondary cursor-pointer transition-colors leading-snug">
+                            Carrying Our Commitment Through the Heart of Winter</h4>
+                        <div class="text-gray-400 text-xs flex items-center mb-4">
+                            <i class="far fa-calendar-alt mr-2"></i> February 2024
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6 line-clamp-3">
+                            February is often a quieter month at Kala Point. While winter provides unique views and
+                            whale activity in our waters...
+                        </p>
+                        <div class="h-[1px] w-full bg-gray-100"></div>
+                    </div>
+                </div>
+
+                <!-- Newsletter 3 -->
+                <div class="bg-white rounded-md overflow-hidden shadow-lg hover:shadow-md transition-shadow group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="assets/news-3.png" alt="Past Presidents"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                    </div>
+                    <div class="p-6">
+                        <h4
+                            class="text-primary font-bold mb-3 hover:text-secondary cursor-pointer transition-colors leading-snug">
+                            Welcoming the Light, Strengthening Our Community</h4>
+                        <div class="text-gray-400 text-xs flex items-center mb-4">
+                            <i class="far fa-calendar-alt mr-2"></i> March 2024
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6 line-clamp-3">
+                            As the days get a little longer and the first signs of spring emerge, there is a hopeful
+                            feeling of progress in our community...
+                        </p>
+                        <div class="h-[1px] w-full bg-gray-100"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#"
+                    class="bg-secondary text-white px-8 py-3 font-bold hover:bg-secondary/90 transition-all uppercase text-sm tracking-widest inline-block shadow-md">VIEW
+                    ALL NEWSLETTERS</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signup Section -->
+    <section class="relative h-96 lg:pb-24 px-4 overflow-hidden lg:overflow-visible">
+        <div class="absolute  bg-red-500 inset-0 z-0">
+            <img src="assets/signup-bg.png" alt="Pier View" class="w-full h-full object-cover">
+        </div>
+
+        <div class="container mx-auto relative  ">
+            <div
+                class="bg-white/90 backdrop-blur-md p-6 lg:p-10 !py-6 max-w-4xl mx-auto rounded-sm border-4 lg:border-8 border-secondary flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8 shadow-2xl">
+                <div class="flex-1 min-w-[300px] text-center lg:text-left">
+                    <h2 class="text-xl lg:text-2xl font-serif text-primary font-bold mb-1">Newsletter Sign Up</h2>
+                    <p class="text-primary text-sm">Stay updated with our latest community news.</p>
+                </div>
+                <form class="flex-1 w-full lg:min-w-[300px] flex flex-col sm:flex-row gap-2">
+                    <input type="email" placeholder="Enter your email"
+                        class="flex-1 px-4 py-2 bg-white border border-gray-200 focus:outline-none focus:border-secondary transition-colors"
+                        required>
+                    <button type="submit"
+                        class="bg-secondary text-white px-8 py-2 font-bold hover:bg-secondary/90 transition-all uppercase tracking-wider shadow-sm">SUBSCRIBE</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#172933] text-white pt-24 lg:pt-40 pb-12 px-4 md:px-12">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 max-w-5xl">
+            <div class="space-y-6 text-center md:text-left">
+                <div class="flex justify-center md:justify-start">
+                    <img src="assets/logo-dark.jpeg" alt="Footer Logo" class="h-24 w-auto brightness-110">
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto md:mx-0">
+                    Winter is when we take stock. reviewing maintainance needs coordinating with vendors.
+                </p>
+            </div>
+
+            <div class="text-center md:text-left">
+                <h3
+                    class="text-lg font-bold mb-6 relative pb-2 inline-block md:block border-b-2 border-secondary lg:border-none">
+                    Quick Links</h3>
+                <ul class="space-y-3 text-gray-400 text-sm">
+                    <li><a href="#" class="hover:text-secondary transition-colors">Home</a></li>
+                    <li><a href="#" class="hover:text-secondary transition-colors">About Community</a></li>
+                    <li><a href="#" class="hover:text-secondary transition-colors">Board of Directors</a></li>
+                    <li><a href="#" class="hover:text-secondary transition-colors">Newsletters</a></li>
+                </ul>
+            </div>
+
+            <div class="text-center md:text-left">
+                <h3
+                    class="text-lg font-bold mb-6 relative pb-2 inline-block md:block border-b-2 border-secondary lg:border-none">
+                    Other Links</h3>
+                <ul class="space-y-3 text-gray-400 text-sm">
+                    <li><a href="#" class="hover:text-secondary transition-colors">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-secondary transition-colors">Terms & Conditions</a></li>
+                    <li><a href="#" class="hover:text-secondary transition-colors">Copyright</a></li>
+                </ul>
+            </div>
+
+            <div class="text-center md:text-left">
+                <h3
+                    class="text-lg font-bold mb-6 relative pb-2 inline-block md:block border-b-2 border-secondary lg:border-none">
+                    Contact Info</h3>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li class="flex items-start justify-center md:justify-start">
+                        <i class="fas fa-map-marker-alt mt-1 mr-3 text-secondary"></i>
+                        <span>123 Kala Point Road,<br>Port Townsend, WA 98368</span>
+                    </li>
+                    <li class="flex items-center justify-center md:justify-start">
+                        <i class="fas fa-phone mr-3 text-secondary"></i>
+                        <span>(123) 456-7890</span>
+                    </li>
+                    <li class="flex items-center justify-center md:justify-start">
+                        <i class="fas fa-envelope mr-3 text-secondary"></i>
+                        <span>info@kalapoint.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <footer class="bg-[#111E24] py-6 px-4">
+        <div class="container max-w-5xl mx-auto  flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-gray-400 text-sm text-center md:text-left whitespace-nowrap">© 2024 Copyright Reserved | KPCA
+                Powered</p>
+            <div class="flex space-x-3">
+                <a href="#"
+                    class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center hover:scale-110 transition-transform"><i
+                        class="fab fa-facebook-f text-sm"></i></a>
+                <a href="#"
+                    class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center hover:scale-110 transition-transform"><i
+                        class="fab fa-twitter text-sm"></i></a>
+                <a href="#"
+                    class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center hover:scale-110 transition-transform"><i
+                        class="fab fa-instagram text-sm"></i></a>
+                <a href="#"
+                    class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center hover:scale-110 transition-transform"><i
+                        class="fab fa-linkedin-in text-sm"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        $(document).ready(function () {
+            // Mobile Menu Toggle
+            $('#mobile-menu-btn').on('click', function () {
+                $('#main-nav').toggleClass('hidden');
+                $(this).find('i').toggleClass('fa-bars fa-times');
+            });
+
+            // Close mobile menu on click link
+            $('#main-nav a').on('click', function () {
+                if ($(window).width() < 1024) {
+                    $('#main-nav').addClass('hidden');
+                    $('#mobile-menu-btn').find('i').addClass('fa-bars').removeClass('fa-times');
+                }
+            });
+
+            // Navbar glass effect on scroll (for desktop)
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 50) {
+                    $('header').addClass('shadow-lg');
+                } else {
+                    $('header').removeClass('shadow-lg');
+                }
+            });
+
+            // Smooth scrolling for anchor links
+            $('a[href^="#"]').on('click', function (event) {
+                var target = $(this.getAttribute('href'));
+                if (target.length) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top - 80
+                    }, 1000);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

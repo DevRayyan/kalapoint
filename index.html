@@ -78,6 +78,29 @@
             height: 0.5px;
             background-color: #22333B;
         }
+
+        /* Reveal Animations - Refined for "Extra Smooth" feel */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px) scale(0.98);
+            transition: 
+                opacity 1.2s cubic-bezier(0.2, 1, 0.3, 1),
+                transform 1.2s cubic-bezier(0.2, 1, 0.3, 1),
+                visibility 1.2s;
+            will-change: transform, opacity;
+            visibility: hidden;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            visibility: visible;
+        }
+
+        .reveal-delay-1 { transition-delay: 0.15s; }
+        .reveal-delay-2 { transition-delay: 0.3s; }
+        .reveal-delay-3 { transition-delay: 0.45s; }
+        .reveal-delay-4 { transition-delay: 0.6s; }
     </style>
 </head>
 
@@ -167,7 +190,7 @@
             style="background-image: url('assets/hero-bg.jpeg'); background-size: cover; background-position: center;">
         </div>
         <!-- <div class="absolute inset-0 bg-black/20 lg:hidden"></div> -->
-        <div class="relative z-10 max-w-4xl px-4  ">
+        <div class="relative z-10 max-w-4xl px-4 reveal">
             <div
                 class="text-primary text-sm md:text-base lg:text-primary px-3 py-1 mb-4 md:mb-6 border-l-[1.5px] inline-block border-r-[1.5px] border-primary hero-badge bg-transparent rounded-sm lg:rounded-none">
                 Quiet Living By The Bay
@@ -189,7 +212,7 @@
     <!-- About Section -->
     <section class="py-16 lg:py-24 px-4 md:px-12 bg-white">
         <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div class="max-w-md mx-auto lg:ml-auto text-center lg:text-left order-2 lg:order-1">
+            <div class="max-w-md mx-auto lg:ml-auto text-center lg:text-left order-2 lg:order-1 reveal">
                 <h2 class="text-3xl lg:text-5xl font-serif text-black font-bold mb-6 lg:mb-8 relative">
                     ABOUT <span class="text-primary">US</span>
                 </h2>
@@ -203,13 +226,13 @@
                     class="bg-secondary text-white px-8 py-3 inline-block hover:opacity-90 transition-opacity rounded-sm font-semibold uppercase tracking-wider">LEARN
                     MORE</a>
             </div>
-            <div class="relative order-1 lg:order-2">
+            <div class="relative order-1 lg:order-2 reveal reveal-delay-2">
                 <div class="h-[300px] lg:h-[500px] max-w-md mx-auto">
                     <img src="assets/about-deer.jpeg" alt="Wildlife around Kala Point"
                         class="w-full h-full shadow-lg object-cover rounded-t-full">
                 </div>
                 <!-- Decorative Elements -->
-                <div class="hidden lg:block absolute -bottom-6 -left-6 bg-secondary w-24 h-24 -z-10 opacity-20"></div>
+                <!-- <div class="hidden lg:block absolute -bottom-6 -left-6 bg-secondary w-24 h-24 -z-10 opacity-20"></div> -->
                 <div class="absolute top-4 right-10 lg:top-10 lg:right-20">
                     <i class="fas fa-dove text-primary text-3xl lg:text-4xl opacity-80"></i>
                 </div>
@@ -225,7 +248,7 @@
             </h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Highlight 1 -->
-                <div class="group relative overflow-hidden h-80 lg:h-96 rounded-lg cursor-pointer">
+                <div class="group relative overflow-hidden h-80 lg:h-96 rounded-lg cursor-pointer reveal">
                     <img src="assets/highlight-bay.jpeg" alt="Bay View"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300"></div>
@@ -242,7 +265,8 @@
                     </div>
                 </div>
                 <!-- Highlight 2 -->
-                <div class="group relative overflow-hidden h-80 lg:h-96 rounded-lg cursor-pointer">
+                <div
+                    class="group relative overflow-hidden h-80 lg:h-96 rounded-lg cursor-pointer reveal reveal-delay-1">
                     <img src="assets/highlight-residential.jpeg" alt="Peaceful Area"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300"></div>
@@ -259,7 +283,8 @@
                     </div>
                 </div>
                 <!-- Highlight 3 -->
-                <div class="group relative overflow-hidden h-80 lg:h-96 rounded-lg cursor-pointer">
+                <div
+                    class="group relative overflow-hidden h-80 lg:h-96 rounded-lg cursor-pointer reveal reveal-delay-2">
                     <img src="assets/highlight-woodland.jpeg" alt="Woodland"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300"></div>
@@ -276,7 +301,8 @@
                     </div>
                 </div>
                 <!-- Highlight 4 -->
-                <div class="group relative overflow-hidden h-80 lg:h-96 rounded-lg cursor-pointer">
+                <div
+                    class="group relative overflow-hidden h-80 lg:h-96 rounded-lg cursor-pointer reveal reveal-delay-3">
                     <img src="assets/highlight-condo.jpeg" alt="Condos"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300"></div>
@@ -299,7 +325,7 @@
     <!-- Newsletters Preview -->
     <section class="py-16 lg:py-24 bg-gray-50">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-12 lg:mb-16">
+            <div class="text-center mb-12 lg:mb-16 reveal">
                 <h2 class="text-dark font-serif font-medium text-3xl lg:text-4xl mb-2 italic lg:not-italic">LATEST
                     NEWSLETTER</h2>
                 <h3 class="text-primary font-bold text-3xl lg:text-4xl">PREVIEW</h3>
@@ -307,9 +333,10 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
                 <!-- Newsletter 1 -->
-                <div class="bg-white rounded-md overflow-hidden shadow-lg hover:shadow-md transition-shadow group">
+                <div
+                    class="bg-white rounded-md overflow-hidden shadow-lg hover:shadow-md transition-shadow group reveal">
                     <div class="h-48 overflow-hidden">
-                        <img src="assets/news-1.jpeg" alt="Progress and Planning"
+                        <img src="assets/news-1.jpg" alt="Progress and Planning"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform">
                     </div>
                     <div class="p-6">
@@ -328,9 +355,10 @@
                 </div>
 
                 <!-- Newsletter 2 -->
-                <div class="bg-white rounded-md overflow-hidden shadow-lg hover:shadow-md transition-shadow group">
+                <div
+                    class="bg-white rounded-md overflow-hidden shadow-lg hover:shadow-md transition-shadow group reveal reveal-delay-1">
                     <div class="h-48 overflow-hidden">
-                        <img src="assets/news-2.jpeg" alt="Winter Whale Watching"
+                        <img src="assets/news-2.jpg" alt="Winter Whale Watching"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform">
                     </div>
                     <div class="p-6">
@@ -349,10 +377,11 @@
                 </div>
 
                 <!-- Newsletter 3 -->
-                <div class="bg-white rounded-md overflow-hidden shadow-lg hover:shadow-md transition-shadow group">
+                <div
+                    class="bg-white rounded-md overflow-hidden shadow-lg hover:shadow-md transition-shadow group reveal reveal-delay-2">
                     <div class="h-48 overflow-hidden">
-                        <img src="assets/news-3.jpeg" alt="Past Presidents"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                        <img src="assets/news-3.png" alt="Past Presidents"
+                            class="w-full  group-hover:scale-105 transition-transform">
                     </div>
                     <div class="p-6">
                         <h4
@@ -384,7 +413,7 @@
             <img src="assets/signup-bg.png" alt="Pier View" class="w-full bg-gray-50">
         </div>
 
-        <div class="container mx-auto absolute bottom-0 left-0 right-0 z-10">
+        <div class="container mx-auto absolute bottom-0 left-0 right-0 z-10 reveal">
             <div
                 class="bg-white/90 backdrop-blur-md p-6 lg:p-10 !py-6 max-w-4xl mx-auto rounded-sm border-4 lg:border-8 border-secondary flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8 shadow-2xl translate-y-1/2">
                 <div class="flex-1 min-w-[280px] text-center lg:text-left">
@@ -512,6 +541,26 @@
                         scrollTop: target.offset().top - 80
                     }, 1000);
                 }
+            });
+
+            // Reveal Animation Observer
+            const observerOptions = {
+                root: null,
+                threshold: 0.15,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach(el => {
+                observer.observe(el);
             });
         });
     </script>

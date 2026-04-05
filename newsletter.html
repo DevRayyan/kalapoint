@@ -4,12 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Kala Point Condominium Association</title>
-    <meta name="description"
-        content="Learn more about Kala Point, our community, and the Board of Directors dedicated to maintaining our beautiful neighborhood.">
+    <title>Newsletter - Kala Point Condominium Association</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Inter & Playfair Display for headings -->
+    <!-- Google Fonts: Inter & Playfair Display -->
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap"
         rel="stylesheet">
@@ -37,19 +35,8 @@
         }
     </script>
     <style>
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-        }
-
         .hero-gradient {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-        }
-
-        .arch-image {
-            border-top-left-radius: 50% 100%;
-            border-top-right-radius: 50% 100%;
-            overflow: hidden;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
         }
 
         .reveal {
@@ -67,14 +54,6 @@
             opacity: 1;
             transform: translateY(0) scale(1);
             visibility: visible;
-        }
-
-        .reveal-delay-1 {
-            transition-delay: 0.15s;
-        }
-
-        .reveal-delay-2 {
-            transition-delay: 0.3s;
         }
     </style>
 </head>
@@ -122,12 +101,12 @@
                 <nav id="main-nav"
                     class="hidden lg:flex flex-1 flex flex-col lg:flex-row items-center justify-center lg:justify-end px-6 space-y-6 lg:space-y-0 lg:space-x-10 py-8 lg:py-0 border-t lg:border-none border-gray-100 bg-white lg:bg-transparent uppercase font-bold text-xs">
                     <a href="index.html" class="text-gray-800 hover:text-secondary transition-colors">Home</a>
-                    <a href="about.html" class="text-[#9EC5CB] border-b-2 border-[#9EC5CB] pb-1 uppercase text-sm">About
+                    <a href="about.html" class="text-gray-800 hover:text-secondary transition-colors">About
                         Community</a>
                     <a href="about.html#board" class="text-gray-800 hover:text-secondary transition-colors">Board of
                         Directors</a>
                     <a href="newsletter.html"
-                        class="text-gray-800 hover:text-secondary transition-colors">Newsletters</a>
+                        class="text-[#9EC5CB] border-b-2 border-[#9EC5CB] pb-1 uppercase text-sm tracking-wide">Newsletters</a>
                     <a href="governing-documents.html"
                         class="text-gray-800 hover:text-secondary transition-colors">Governing Documents</a>
                     <a href="#"
@@ -137,10 +116,11 @@
             </div>
         </div>
     </header>
-    <!-- Subpage Hero -->
+
+    <!-- Hero -->
     <section class="relative h-[400px] flex items-center justify-center text-center text-white overflow-hidden">
         <div class="absolute inset-0 bg-center hero-gradient"
-            style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/sunset-view.jpeg'); background-size: cover; background-position: center;">
+            style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('assets/highlight-woodland.jpeg'); background-size: cover; background-position: center;">
         </div>
         <div class="relative z-10 reveal">
             <div class="flex items-center justify-center gap-4 mb-4">
@@ -148,139 +128,125 @@
                 <span class="text-xs tracking-[0.3em] uppercase font-medium">Quiet Living By The Bay</span>
                 <div class="w-12 h-[1px] bg-secondary"></div>
             </div>
-            <h1 class="text-4xl md:text-6xl font-bold uppercase tracking-wider mb-2">About Us</h1>
+            <h1 class="text-5xl md:text-7xl font-bold uppercase  mb-2">Newsletter</h1>
         </div>
     </section>
 
-    <!-- About Section (Copied from index.html) -->
-    <section class="py-16 lg:py-24 px-4 md:px-12 bg-white">
-        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div class="max-w-md mx-auto lg:ml-auto text-center lg:text-left order-2 lg:order-1 reveal">
-                <h2 class="text-3xl lg:text-5xl font-serif text-black font-bold mb-6 lg:mb-8 relative uppercase">
-                    About <span class="text-primary font-serif">Us</span>
-                </h2>
-                <p class="text-gray-600 leading-relaxed mb-8">
-                    Our condominium community is a small and welcoming neighborhood of 37 homes located near the bay and
-                    surrounded by natural woodland. Residents enjoy a quiet atmosphere, scenic surroundings, and a
-                    strong sense of community.
-                </p>
-
-                <a href="#"
-                    class="bg-secondary text-white px-8 py-3 inline-block hover:opacity-90 transition-opacity rounded-sm font-semibold uppercase tracking-wider text-xs">LEARN
-                    MORE</a>
-            </div>
-            <div class="relative order-1 lg:order-2 reveal reveal-delay-2">
-                <div class="h-[300px] lg:h-[500px] max-w-md mx-auto">
-                    <img src="assets/about-deer.jpeg" alt="Wildlife around Kala Point"
-                        class="w-full h-full shadow-lg object-cover rounded-t-full">
-                </div>
-                <div class="absolute top-4 right-10 lg:top-10 lg:right-20">
-                    <i class="fas fa-dove text-primary text-3xl lg:text-4xl opacity-80"></i>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Board of Directors Section -->
-    <section id="board" class="py-16 lg:py-24 bg-white border-t border-gray-50">
-        <div class="container mx-auto px-8">
-            <div class="text-center mb-12 lg:mb-16 reveal">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 uppercase tracking-loose">
-                    Board of <span class="text-primary">Directors</span>
-                </h2>
+    <!-- Newsletters Content -->
+    <section class="py-16 lg:py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-16 lg:mb-24 reveal">
+                <h2
+                    class="text-gray-800 text-xl md:text-2xl font-semibold uppercase tracking-[0.2em] mb-4 inline-block px-4">
+                    Condominium Association</h2>
+                <h3 class="text-primary text-4xl md:text-5xl font-bold uppercase ">Newsletter</h3>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 max-w-5xl mx-auto">
-                <!-- Member 1 -->
-                <div class="bg-white group overflow-hidden shadow-md rounded-md reveal">
-                    <div class="h-[300px] bg-gray-100 overflow-hidden relative">
-                        <!-- Using a placeholder for the photo shown in mockup but not in assets -->
-                        <!-- <div class="absolute inset-0 bg-gray-200 flex items-center justify-center">
-                            <i class="fas fa-user text-6xl text-gray-400"></i>
-                        </div> -->
-                        <!-- Note: Replace with actual image when available -->
-                        <img src="assets/person-01.png" alt="Susie Headlee" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6 text-center -mt-2 relative bg-white rounded-sm">
-                        <h3 class="text-lg font-bold text-gray-800 mb-1">Susie Headlee</h3>
-                        <p class="text-secondary text-xs uppercase tracking-widest font-medium">President</p>
+            <!-- News 1 -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start mb-24 lg:mb-32 reveal">
+                <div class="h-[450px] md:h-[600px] rounded-sm overflow-hidden shadow-2xl">
+                    <img src="assets/ship.jpeg" alt="Gratitude Progress Planning" class="w-full h-full object-cover">
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-2xl lg:text-3xl font-bold text-gray-800 leading-tight uppercase">Gratitude, Progress
+                        and Planning for the Year Ahead</h3>
+                    <p class="text-secondary font-bold uppercase tracking-widest text-sm">November 2023</p>
+                    <div class="text-gray-600 space-y-4 text-sm ">
+                        <p>As autumn settles across our beach community, there is a distinct energy in the air. Many
+                            things we have to be grateful for—our stunning natural surroundings, our dedicated
+                            neighbors, and the vibrant sense of community that makes Kala Point more than just a place
+                            to live; it's a place to belong.</p>
+                        <p>This season has brought both change and momentum. Roofing work has started on Building 100,
+                            taking its next steps on our long-term maintenance plan. Our project, along with others, is
+                            crucial to preserving the integrity and value of our homes, and I thank everyone for their
+                            patience and support during this process. In early fall, our Annual Budget Meeting on
+                            November 21 offers an important opportunity for owners to participate (via in-person or
+                            live-streaming) in financial planning for the community's future. This year's budget
+                            reflects necessary steps to increase reserves for roofing, paving, and other major long-term
+                            needs. Your participation and your vote on these investment decisions reflect the priorities
+                            of our entire community.</p>
+                        <p>I want to take a moment to recognize the spirit of teamwork that keeps us united. Whether
+                            it's neighbors helping each other with yard work (thank you, Richard & Jan! ), or simply
+                            lending a hand when a task arises, it is this sense of partnership that builds community. A
+                            warm welcome to all our new residents who joined us recently; we look forward to getting to
+                            know you. On behalf of the Board of Directors, I appreciate your ongoing commitment and
+                            support. Together, we are keeping Kala Point a community that reflects the best of the
+                            Pacific Northwest—thoughtful, welcoming, and resilient.</p>
                     </div>
                 </div>
+            </div>
 
-                <!-- Member 2 -->
-                <div class="bg-white group overflow-hidden shadow-md rounded-md reveal reveal-delay-1">
-                    <div class="h-[300px] bg-gray-100 overflow-hidden relative">
-                        <div class="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-400">
-                            <i class="fas fa-user text-6xl"></i>
-                        </div>
-                    </div>
-                    <div class="p-6 text-center -mt-2 relative bg-white">
-                        <h3 class="text-lg font-bold text-gray-800 mb-1">Linda Therou</h3>
-                        <p class="text-secondary text-xs uppercase tracking-widest font-medium">Vice President</p>
+            <!-- News 2 (Reversed) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start mb-24 lg:mb-32 reveal">
+                <div class="lg:order-2 h-[450px] md:h-[600px] rounded-sm overflow-hidden shadow-2xl">
+                    <img src="assets/nature-flowers.jpeg" alt="New Year Filled With Care"
+                        class="w-full h-full object-cover">
+                </div>
+                <div class="lg:order-1 space-y-4">
+                    <h3 class="text-2xl lg:text-3xl font-bold text-gray-800 leading-tight uppercase">A New Year Filled
+                        With Care, Connection, and Community</h3>
+                    <p class="text-secondary font-bold uppercase tracking-widest text-sm">January 2024</p>
+                    <div class="text-gray-600 space-y-4 text-sm">
+                        <p>As we welcome the new year, we sincerely thank you for your trust, engagement, guidance, and
+                            feedback that shape our community spirit on your behalf of all over at Kala Point, and we
+                            welcome this new year with dedicated excitement. Our common ground is more than just
+                            buildings; it's a living space shaped by our care, stewardship, and shared effort. This
+                            year, we continue to focus on maintaining what we have, planning wisely for the future, and
+                            making thoughtful improvements that ensure our community remains the sanctuary we cherish.
+                            As we begin this year's work, we reaffirm our commitment to clear communication and careful
+                            administrative oversight. Many ongoing projects are long-term investments in our community's
+                            health and stability, and we will continue updating everyone as they progress. Our goal is
+                            to ensure every dollar is well invested and serves the collective interests we share.</p>
+                        <p>Your involvement—whether by attending meetings, becoming a part of our committees, or simply
+                            staying informed—is essential to our success. Recently, we heard shared that although some
+                            couldn't attend meetings, the people enjoy every email, every newsletter, every
+                            communication we send.</p>
+                        <p>Hearing that was a nice—a reminder that engagement varies for everyone. What matters is that
+                            each of us stays informed and connected in a way that works for us, as we continue moving
+                            forward together into a great 2024.</p>
                     </div>
                 </div>
+            </div>
 
-                <!-- Member 3 -->
-                <div class="bg-white group overflow-hidden shadow-md rounded-md reveal reveal-delay-2">
-                    <div class="h-[300px] bg-gray-100 overflow-hidden relative">
-                        <div class="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-400">
-                            <i class="fas fa-user text-6xl"></i>
-                        </div>
-                    </div>
-                    <div class="p-6 text-center -mt-2 relative bg-white">
-                        <h3 class="text-lg font-bold text-gray-800 mb-1">Liza Caputo</h3>
-                        <p class="text-secondary text-xs uppercase tracking-widest font-medium">Treasurer</p>
-                    </div>
+            <!-- News 3 -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start mb-16 reveal">
+                <div
+                    class="h-[450px] md:h-[600px] rounded-sm overflow-hidden shadow-2xl bg-dark p-6 flex items-center justify-center">
+                    <img src="assets/moon.jpeg" alt="Welcoming the Light" class="max-w-full max-h-full object-contain">
                 </div>
-
-                <!-- Member 4 -->
-                <div class="bg-white group overflow-hidden shadow-md rounded-md reveal">
-                    <div class="h-[300px] bg-gray-100 overflow-hidden relative">
-                        <div class="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-400">
-                            <i class="fas fa-user text-6xl"></i>
-                        </div>
-                    </div>
-                    <div class="p-6 text-center -mt-2 relative bg-white">
-                        <h3 class="text-lg font-bold text-gray-800 mb-1">Mike Montague</h3>
-                        <p class="text-secondary text-xs uppercase tracking-widest font-medium">Acting Secretary</p>
-                    </div>
-                </div>
-
-                <!-- Member 5 -->
-                <div class="bg-white group overflow-hidden shadow-md rounded-md reveal reveal-delay-1">
-                    <div class="h-[300px] bg-gray-100 overflow-hidden relative">
-                        <div class="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-400">
-                            <i class="fas fa-user text-6xl"></i>
-                        </div>
-                    </div>
-                    <div class="p-6 text-center -mt-2 relative bg-white">
-                        <h3 class="text-lg font-bold text-gray-800 mb-1">Open</h3>
-                        <p class="text-secondary text-xs uppercase tracking-widest font-medium">Board Position</p>
-                    </div>
-                </div>
-
-                <!-- Member 6 -->
-                <div class="bg-white group overflow-hidden shadow-md rounded-md reveal reveal-delay-2">
-                    <div class="h-[300px] bg-gray-100 overflow-hidden relative">
-                        <div class="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-400">
-                            <i class="fas fa-user text-6xl"></i>
-                        </div>
-                    </div>
-                    <div class="p-6 text-center -mt-2 relative bg-white">
-                        <h3 class="text-lg font-bold text-gray-800 mb-1">Marilyn Kurka</h3>
-                        <div class="text-secondary text-[10px] uppercase tracking-widest font-medium leading-tight">
-                            Community Manager / <br> Windermere Property Management
-                        </div>
+                <div class="space-y-4">
+                    <h3 class="text-2xl lg:text-3xl font-bold text-gray-800 leading-tight uppercase">Welcoming the
+                        Light, Strengthening Our Community</h3>
+                    <p class="text-secondary font-bold uppercase tracking-widest text-sm">March 2024</p>
+                    <div class="text-gray-600 space-y-4 text-sm">
+                        <p>As the days get a bit longer and the first signs of spring emerge, March brings a hopeful
+                            feeling of progress. There is a sense of renewal—both in our surroundings and in how we
+                            support our community. There is much to say about this month, and we want to take a moment
+                            to say how much we appreciate the small, but meaningful shifts happening around us: bright
+                            morning sun, neighbors out walking again, and the first green buds pushing through the soil.
+                            This natural transition mirrors the work happening within KPCA.</p>
+                        <p>Even in the quieter winter months, our community has been steadily preparing for the busier
+                            seasons ahead. We are focused on building maintenance, enhancing security, and strengthening
+                            the systems that keep everything running smoothly. March gives us a chance to take stock of
+                            our foundation and look forward with a sense of shared purpose.</p>
+                        <p>Committees and landscapes partners are moving into spring readiness mode, and I want to
+                            acknowledge their hard work in keeping our community and its trees and shrubs healthy. We
+                            have several completed seasonal pruning and cleanup, and much budget go into tree care
+                            maintenance, preparing well before the vertical months have been at. These routine steps
+                            help us stay ahead of seasonal wear, protect our buildings and greenery, and ensure KPCA
+                            remains scenic and beautiful for all to enjoy. Much gratitude to James and his crew for
+                            their steady, thoughtful work as we transition into spring.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- Signup Section -->
     <section class="relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] px-4 overflow-visible">
         <div class="absolute inset-0 z-0 h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden">
-            <img src="assets/signup-bg.png" alt="Pier View" class="w-full ">
+            <img src="assets/signup-bg.png" alt="Pier View" class="w-full">
         </div>
 
         <div class="container mx-auto absolute bottom-0 left-0 right-0 z-10 reveal">
@@ -325,7 +291,6 @@
                     <li><a href="newsletter.html" class="hover:text-secondary transition-colors">Newsletters</a></li>
                     <li><a href="governing-documents.html" class="hover:text-secondary transition-colors">Governing
                             Documents</a></li>
-
                 </ul>
             </div>
 
@@ -388,14 +353,6 @@
             $('#mobile-menu-btn').on('click', function () {
                 $('#main-nav').toggleClass('hidden');
                 $(this).find('i').toggleClass('fa-bars fa-times');
-            });
-
-            // Close mobile menu on click link
-            $('#main-nav a').on('click', function () {
-                if ($(window).width() < 1024) {
-                    $('#main-nav').addClass('hidden');
-                    $('#mobile-menu-btn').find('i').addClass('fa-bars').removeClass('fa-times');
-                }
             });
 
             // Reveal Animation Observer

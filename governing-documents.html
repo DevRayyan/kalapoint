@@ -4,12 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Kala Point Condominium Association</title>
-    <meta name="description"
-        content="Learn more about Kala Point, our community, and the Board of Directors dedicated to maintaining our beautiful neighborhood.">
+    <title>Governing Documents - Kala Point Condominium Association</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Inter & Playfair Display for headings -->
+    <!-- Google Fonts: Inter & Playfair Display -->
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap"
         rel="stylesheet">
@@ -37,19 +35,8 @@
         }
     </script>
     <style>
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-        }
-
         .hero-gradient {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-        }
-
-        .arch-image {
-            border-top-left-radius: 50% 100%;
-            border-top-right-radius: 50% 100%;
-            overflow: hidden;
+            background: linear-gradient(rgba(34, 66, 81, 0.6), rgba(34, 66, 81, 0.6));
         }
 
         .reveal {
@@ -69,12 +56,13 @@
             visibility: visible;
         }
 
-        .reveal-delay-1 {
-            transition-delay: 0.15s;
+        .doc-card {
+            transition: all 0.3s ease;
         }
 
-        .reveal-delay-2 {
-            transition-delay: 0.3s;
+        .doc-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -99,7 +87,7 @@
                 <div class="hidden lg:flex bg-primary text-white py-3 pl-16 pr-6 items-center justify-center gap-10 text-sm relative"
                     style="clip-path: polygon(0 0, 100% 0, 100% 100%, 40px 100%); margin-left: -40px;">
                     <div class="flex items-center space-x-4">
-                        <span class="font-medium opacity-90">Social Media:</span>
+                        <span class="font-medium opacity-90 text-xs tracking-wider">Social Media:</span>
                         <div class="flex space-x-3">
                             <a href="#" class="hover:text-secondary"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="hover:text-secondary"><i class="fab fa-instagram"></i></a>
@@ -109,168 +97,174 @@
                     <div class="h-4 w-[1px] bg-white/20"></div>
                     <div class="flex items-center">
                         <i class="fas fa-envelope mr-3 opacity-80"></i>
-                        <a href="mailto:info@kalapoint.com"
-                            class="ml-2 font-medium hover:text-secondary">info@kalapoint.com</a>
+                        <a href="mailto:info@kalapoint.com" class="font-medium hover:text-secondary">Email:
+                            info@kalapoint.com</a>
                     </div>
                     <div class="h-4 w-[1px] bg-white/20"></div>
                     <div class="flex items-center">
-                        <i class="fas fa-phone-alt mr-3 opacity-80 rotate-90"></i>
-                        <span class="ml-2 font-bold text-lg">0123-456-7890</span>
+                        <i class="fas fa-phone-alt mr-3 rotate-90 opacity-80"></i>
+                        <span class="opacity-90 uppercase text-[10px] tracking-wider font-bold mr-2">CALL US
+                            TODAY:</span>
+                        <span class="font-bold text-lg">0123-456-7890</span>
                     </div>
                 </div>
 
                 <nav id="main-nav"
-                    class="hidden lg:flex flex-1 flex flex-col lg:flex-row items-center justify-center lg:justify-end px-6 space-y-6 lg:space-y-0 lg:space-x-10 py-8 lg:py-0 border-t lg:border-none border-gray-100 bg-white lg:bg-transparent uppercase font-bold text-xs">
+                    class="hidden lg:flex flex-1 flex items-center justify-center lg:justify-end px-6 lg:space-x-10 py-8 lg:py-0 border-t lg:border-none border-gray-100 bg-white lg:bg-transparent uppercase font-bold text-xs tracking-wider">
                     <a href="index.html" class="text-gray-800 hover:text-secondary transition-colors">Home</a>
-                    <a href="about.html" class="text-[#9EC5CB] border-b-2 border-[#9EC5CB] pb-1 uppercase text-sm">About
+                    <a href="about.html" class="text-gray-800 hover:text-secondary transition-colors">About
                         Community</a>
                     <a href="about.html#board" class="text-gray-800 hover:text-secondary transition-colors">Board of
                         Directors</a>
                     <a href="newsletter.html"
                         class="text-gray-800 hover:text-secondary transition-colors">Newsletters</a>
                     <a href="governing-documents.html"
-                        class="text-gray-800 hover:text-secondary transition-colors">Governing Documents</a>
+                        class="text-[#9EC5CB] border-b-2 border-[#9EC5CB] pb-1 uppercase text-sm">Governing
+                        Documents</a>
                     <a href="#"
-                        class="bg-secondary text-white px-8 py-3 hover:bg-secondary/90 transition-all tracking-widest text-center">CONTACT
+                        class="bg-secondary text-white px-8 py-3 hover:bg-secondary/90 transition-all tracking-[0.2em] text-center">CONTACT
                         US</a>
                 </nav>
             </div>
         </div>
     </header>
-    <!-- Subpage Hero -->
-    <section class="relative h-[400px] flex items-center justify-center text-center text-white overflow-hidden">
-        <div class="absolute inset-0 bg-center hero-gradient"
-            style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/sunset-view.jpeg'); background-size: cover; background-position: center;">
-        </div>
-        <div class="relative z-10 reveal">
-            <div class="flex items-center justify-center gap-4 mb-4">
-                <div class="w-12 h-[1px] bg-secondary"></div>
-                <span class="text-xs tracking-[0.3em] uppercase font-medium">Quiet Living By The Bay</span>
-                <div class="w-12 h-[1px] bg-secondary"></div>
-            </div>
-            <h1 class="text-4xl md:text-6xl font-bold uppercase tracking-wider mb-2">About Us</h1>
-        </div>
-    </section>
 
-    <!-- About Section (Copied from index.html) -->
-    <section class="py-16 lg:py-24 px-4 md:px-12 bg-white">
-        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div class="max-w-md mx-auto lg:ml-auto text-center lg:text-left order-2 lg:order-1 reveal">
-                <h2 class="text-3xl lg:text-5xl font-serif text-black font-bold mb-6 lg:mb-8 relative uppercase">
-                    About <span class="text-primary font-serif">Us</span>
-                </h2>
-                <p class="text-gray-600 leading-relaxed mb-8">
-                    Our condominium community is a small and welcoming neighborhood of 37 homes located near the bay and
-                    surrounded by natural woodland. Residents enjoy a quiet atmosphere, scenic surroundings, and a
-                    strong sense of community.
-                </p>
-
-                <a href="#"
-                    class="bg-secondary text-white px-8 py-3 inline-block hover:opacity-90 transition-opacity rounded-sm font-semibold uppercase tracking-wider text-xs">LEARN
-                    MORE</a>
-            </div>
-            <div class="relative order-1 lg:order-2 reveal reveal-delay-2">
-                <div class="h-[300px] lg:h-[500px] max-w-md mx-auto">
-                    <img src="assets/about-deer.jpeg" alt="Wildlife around Kala Point"
-                        class="w-full h-full shadow-lg object-cover rounded-t-full">
-                </div>
-                <div class="absolute top-4 right-10 lg:top-10 lg:right-20">
-                    <i class="fas fa-dove text-primary text-3xl lg:text-4xl opacity-80"></i>
-                </div>
-            </div>
+    <!-- Hero Section -->
+    <section
+        class="relative h-[200px] md:h-[250px] flex items-center justify-center text-center text-white overflow-hidden">
+        <div class="absolute inset-0 bg-center hero-gradient flex items-center justify-center"
+            style="background-image:url('assets/hero-bg.jpeg'); background-size: cover; background-position: top;">
+            <!-- <div class="absolute inset-0 bg-primary/20"></div> -->
+        </div>
+        <div class="relative z-10 w-full py-10 reveal bg-gradient-to-r from-primary via-primary to-transparent">
+            <h1 class="text-4xl md:text-5xl font-semibold uppercase  drop-shadow-lg">Governing Documents
+            </h1>
         </div>
     </section>
 
-    <!-- Board of Directors Section -->
-    <section id="board" class="py-16 lg:py-24 bg-white border-t border-gray-50">
-        <div class="container mx-auto px-8">
-            <div class="text-center mb-12 lg:mb-16 reveal">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 uppercase tracking-loose">
-                    Board of <span class="text-primary">Directors</span>
-                </h2>
+    <!-- Documents Section -->
+    <section class="py-16 lg:py-24 bg-white relative">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-2xl md:text-3xl font-bold text-primary uppercase tracking-wider mb-2">Important
+                    Documents & Policies</h2>
+                <p class="text-gray-600">Access our community's official documents and guidelines below.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 max-w-5xl mx-auto">
-                <!-- Member 1 -->
-                <div class="bg-white group overflow-hidden shadow-md rounded-md reveal">
-                    <div class="h-[300px] bg-gray-100 overflow-hidden relative">
-                        <!-- Using a placeholder for the photo shown in mockup but not in assets -->
-                        <!-- <div class="absolute inset-0 bg-gray-200 flex items-center justify-center">
-                            <i class="fas fa-user text-6xl text-gray-400"></i>
-                        </div> -->
-                        <!-- Note: Replace with actual image when available -->
-                        <img src="assets/person-01.png" alt="Susie Headlee" class="w-full h-full object-cover">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 max-w-4xl mx-auto">
+                <!-- Card 1 -->
+                <div class="bg-[#FBFBFB] border border-gray-300 p-8 flex items-start gap-6 doc-card reveal">
+                    <div class="relative">
+                        <i class="fa-regular fa-file-lines text-7xl text-gray-600"></i>
+                        <div
+                            class="absolute -bottom-1 -right-3 bg-green-600 rounded-full w-10 h-10 flex items-center justify-center border-2 border-white">
+                            <i class="fas fa-check text-[20px] text-white"></i>
+                        </div>
                     </div>
-                    <div class="p-6 text-center -mt-2 relative bg-white rounded-sm">
-                        <h3 class="text-lg font-bold text-gray-800 mb-1">Susie Headlee</h3>
-                        <p class="text-secondary text-xs uppercase tracking-widest font-medium">President</p>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Rules & Regulations</h3>
+                        <p class="text-gray-500 text-sm mb-4">Download Rules & Regulations</p>
+                        <a href="#"
+                            class="inline-flex items-center bg-[#206194] text-white px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wider">Download
+                            PDF</a>
                     </div>
                 </div>
 
-                <!-- Member 2 -->
-                <div class="bg-white group overflow-hidden shadow-md rounded-md reveal reveal-delay-1">
-                    <div class="h-[300px] bg-gray-100 overflow-hidden relative">
-                        <div class="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-400">
-                            <i class="fas fa-user text-6xl"></i>
-                        </div>
+                <!-- Card 2 -->
+                <div
+                    class="bg-[#FBFBFB] border border-gray-300 p-8 flex items-start gap-6 doc-card reveal reveal-delay-1">
+                    <div class="relative">
+                        <i class="fa-solid fa-gavel text-7xl text-gray-600"></i>
                     </div>
-                    <div class="p-6 text-center -mt-2 relative bg-white">
-                        <h3 class="text-lg font-bold text-gray-800 mb-1">Linda Therou</h3>
-                        <p class="text-secondary text-xs uppercase tracking-widest font-medium">Vice President</p>
-                    </div>
-                </div>
-
-                <!-- Member 3 -->
-                <div class="bg-white group overflow-hidden shadow-md rounded-md reveal reveal-delay-2">
-                    <div class="h-[300px] bg-gray-100 overflow-hidden relative">
-                        <div class="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-400">
-                            <i class="fas fa-user text-6xl"></i>
-                        </div>
-                    </div>
-                    <div class="p-6 text-center -mt-2 relative bg-white">
-                        <h3 class="text-lg font-bold text-gray-800 mb-1">Liza Caputo</h3>
-                        <p class="text-secondary text-xs uppercase tracking-widest font-medium">Treasurer</p>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Bylaws</h3>
+                        <p class="text-gray-500 text-sm mb-4">Download Bylaws</p>
+                        <a href="#"
+                            class="inline-flex items-center bg-[#206194] text-white px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wider">Download
+                            PDF</a>
                     </div>
                 </div>
 
-                <!-- Member 4 -->
-                <div class="bg-white group overflow-hidden shadow-md rounded-md reveal">
-                    <div class="h-[300px] bg-gray-100 overflow-hidden relative">
-                        <div class="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-400">
-                            <i class="fas fa-user text-6xl"></i>
+                <!-- Card 3 -->
+                <div class="bg-[#FBFBFB] border border-gray-300 p-8 flex items-start gap-6 doc-card reveal">
+                    <div class="relative">
+                        <i class="fa-regular fa-clipboard text-7xl text-gray-600"></i>
+                        <div
+                            class="absolute -bottom-1 -right-3 bg-green-600 rounded-full w-10 h-10 flex items-center justify-center border-2 border-white">
+                            <i class="fas fa-check text-[20px] text-white"></i>
                         </div>
                     </div>
-                    <div class="p-6 text-center -mt-2 relative bg-white">
-                        <h3 class="text-lg font-bold text-gray-800 mb-1">Mike Montague</h3>
-                        <p class="text-secondary text-xs uppercase tracking-widest font-medium">Acting Secretary</p>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">HOA Policies</h3>
+                        <p class="text-gray-500 text-sm mb-4">View Policies</p>
+                        <a href="#"
+                            class="inline-flex items-center bg-[#206194] text-white px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wider">Download
+                            PDF</a>
                     </div>
                 </div>
 
-                <!-- Member 5 -->
-                <div class="bg-white group overflow-hidden shadow-md rounded-md reveal reveal-delay-1">
-                    <div class="h-[300px] bg-gray-100 overflow-hidden relative">
-                        <div class="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-400">
-                            <i class="fas fa-user text-6xl"></i>
+                <!-- Card 4 -->
+                <div
+                    class="bg-[#FBFBFB] border border-gray-300 p-8 flex items-start gap-6 doc-card reveal reveal-delay-1">
+                    <div class="relative">
+                        <i class="fa-regular fa-calendar-check text-7xl text-gray-600"></i>
+                        <div
+                            class="absolute -bottom-1 -right-3 bg-gray-600 rounded-full w-10 h-10 flex items-center justify-center border-2 border-white">
+                            <i class="fas fa-clock text-[30px] text-white"></i>
                         </div>
                     </div>
-                    <div class="p-6 text-center -mt-2 relative bg-white">
-                        <h3 class="text-lg font-bold text-gray-800 mb-1">Open</h3>
-                        <p class="text-secondary text-xs uppercase tracking-widest font-medium">Board Position</p>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Meeting Minutes</h3>
+                        <p class="text-gray-500 text-sm mb-4">Download Minutes</p>
+                        <a href="#"
+                            class="inline-flex items-center bg-[#206194] text-white px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wider">Download
+                            PDF</a>
                     </div>
                 </div>
+            </div>
 
-                <!-- Member 6 -->
-                <div class="bg-white group overflow-hidden shadow-md rounded-md reveal reveal-delay-2">
-                    <div class="h-[300px] bg-gray-100 overflow-hidden relative">
-                        <div class="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-400">
-                            <i class="fas fa-user text-6xl"></i>
-                        </div>
+            <!-- Wide Card -->
+            <div
+                class="bg-[#FBFBFB] max-w-4xl mx-auto border border-gray-300 p-10 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 reveal mb-10 text-center">
+                <div class="flex  gap-4">
+                    <div class="">
+                        <i class="fa-regular fa-folder-open text-6xl text-gray-600"></i>
                     </div>
-                    <div class="p-6 text-center -mt-2 relative bg-white">
-                        <h3 class="text-lg font-bold text-gray-800 mb-1">Marilyn Kurka</h3>
-                        <div class="text-secondary text-[10px] uppercase tracking-widest font-medium leading-tight">
-                            Community Manager / <br> Windermere Property Management
-                        </div>
+                    <div class="text-left flex flex-col gap-2">
+                        <h3 class="text-xl font-bold text-gray-800">Additional Documents</h3>
+                        <p class="text-gray-500 text-sm">Forms, Notices & Reports</p>
+                        <a href="#"
+                            class="inline-flex items-center bg-[#206194] text-white px-10 py-3 rounded-md text-xs font-semibold uppercase tracking-wider whitespace-nowrap">View
+                            All Documents</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-0 border-t border-gray-300 pt-10 max-w-4xl mx-auto reveal">
+                <div class="p-8 border-b md:border-b-0 md:border-r border-gray-300 flex gap-5 justify-center">
+                    <div class="">
+                        <i class="fas fa-file-contract text-primary text-4xl"></i>
+                    </div>
+
+                    <div>
+
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Community Guidelines</h3>
+                        <a href="#"
+                            class="text-primary font-medium hover:text-secondary border-b border-primary/30 pb-0.5 transition-colors text-sm">Updated
+                            Rules & Regulations</a>
+                    </div>
+                </div>
+                <div class="p-8 flex justify-center gap-5">
+                    <div class="">
+                        <i class="fas fa-house-chimney text-primary text-4xl"></i>
+                    </div>
+
+                    <div class="">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Available Properties</h3>
+                        <a href="#"
+                            class="text-primary font-medium hover:text-secondary border-b border-primary/30 pb-0.5 transition-colors text-sm">View
+                            Condos for Sale</a>
                     </div>
                 </div>
             </div>
@@ -280,7 +274,7 @@
     <!-- Signup Section -->
     <section class="relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] px-4 overflow-visible">
         <div class="absolute inset-0 z-0 h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden">
-            <img src="assets/signup-bg.png" alt="Pier View" class="w-full ">
+            <img src="assets/signup-bg.png" alt="Pier View" class="w-full">
         </div>
 
         <div class="container mx-auto absolute bottom-0 left-0 right-0 z-10 reveal">
@@ -325,7 +319,6 @@
                     <li><a href="newsletter.html" class="hover:text-secondary transition-colors">Newsletters</a></li>
                     <li><a href="governing-documents.html" class="hover:text-secondary transition-colors">Governing
                             Documents</a></li>
-
                 </ul>
             </div>
 
@@ -388,14 +381,6 @@
             $('#mobile-menu-btn').on('click', function () {
                 $('#main-nav').toggleClass('hidden');
                 $(this).find('i').toggleClass('fa-bars fa-times');
-            });
-
-            // Close mobile menu on click link
-            $('#main-nav a').on('click', function () {
-                if ($(window).width() < 1024) {
-                    $('#main-nav').addClass('hidden');
-                    $('#mobile-menu-btn').find('i').addClass('fa-bars').removeClass('fa-times');
-                }
             });
 
             // Reveal Animation Observer

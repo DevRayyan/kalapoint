@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# 1. Remove .html from the URL (External Redirect)
+# If a user types page.html, it sends them to /page
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [L,R=301]
+
+# 2. Map the clean URL back to the file (Internal Rewrite)
+# This lets the server find the actual file even if .html isn't in the URL
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]

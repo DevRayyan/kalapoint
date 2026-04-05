@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions - Kala Point Condominium Association</title>
+    <link rel="icon" type="image/jpeg" href="assets/logo-light.jpeg">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#224251',
+                        secondary: '#88B8A2',
+                        accent: '#EAE0D5',
+                        dark: '#0A0908',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Inter', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px) scale(0.98);
+            transition: opacity 1.2s cubic-bezier(0.2, 1, 0.3, 1), transform 1.2s cubic-bezier(0.2, 1, 0.3, 1), visibility 1.2s;
+            will-change: transform, opacity;
+            visibility: hidden;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body class="font-sans text-gray-800 antialiased overflow-x-hidden">
+
+    <header class="w-full bg-white relative z-50 shadow-sm lg:shadow-none">
+        <div class="w-full mx-auto flex flex-col lg:flex-row items-stretch">
+            <div
+                class="py-4 px-4 lg:pr-10 flex items-center justify-between lg:justify-center bg-white lg:min-w-[300px]">
+                <a href="index.html"><img src="assets/logo-light.jpeg" alt="Kala Point Logo"
+                        class="h-16 lg:h-32 w-auto"></a>
+                <button id="mobile-menu-btn" class="lg:hidden text-primary text-2xl focus:outline-none"><i
+                        class="fas fa-bars"></i></button>
+            </div>
+            <div class="flex-1 flex flex-col">
+                <div class="hidden lg:flex bg-primary text-white py-3 pl-16 pr-6 items-center justify-center gap-10 text-sm relative"
+                    style="clip-path: polygon(0 0, 100% 0, 100% 100%, 40px 100%); margin-left: -40px;">
+                    <div class="flex items-center space-x-4">
+                        <span class="font-medium opacity-90">Social Media:</span>
+                        <div class="flex space-x-3">
+                            <a href="#" class="hover:text-secondary"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="hover:text-secondary"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="hover:text-secondary"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="h-4 w-[1px] bg-white/20"></div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope mr-3 opacity-80"></i>
+                        <a href="mailto:info@kalapointcondos.com"
+                            class="ml-2 font-medium hover:text-secondary">info@kalapointcondos.com</a>
+                    </div>
+                    <div class="h-4 w-[1px] bg-white/20"></div>
+                    <div class="flex items-center"><span class="ml-2 font-bold text-lg">0123-456-7890</span></div>
+                </div>
+                <nav id="main-nav"
+                    class="hidden lg:flex flex-1 flex flex-col lg:flex-row items-center justify-center lg:justify-end px-6 space-y-6 lg:space-y-0 lg:space-x-10 py-8 lg:py-0 border-t lg:border-none border-gray-100 bg-white lg:bg-transparent uppercase font-bold text-xs">
+                    <a href="index.html" class="text-gray-800 hover:text-secondary transition-colors">Home</a>
+                    <a href="about.html"
+                        class="text-gray-800 hover:text-secondary transition-colors tracking-wide">About Community</a>
+                    <a href="about.html#board" class="text-gray-800 hover:text-secondary transition-colors">Board of
+                        Directors</a>
+                    <a href="newsletter.html"
+                        class="text-gray-800 hover:text-secondary transition-colors">Newsletters</a>
+                    <a href="governing-documents.html"
+                        class="text-gray-800 hover:text-secondary transition-colors">Governing Documents</a>
+                    <a href="#"
+                        class="bg-secondary text-white px-8 py-3 hover:bg-secondary/90 transition-all tracking-widest text-center">CONTACT
+                        US</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section
+        class="relative h-[200px] md:h-[250px] flex items-center justify-center text-center text-white overflow-hidden">
+        <div class="absolute inset-0 bg-center">
+        </div>
+        <div class="relative z-10 w-full py-10 reveal bg-gradient-to-r from-primary via-primary to-transparent">
+            <h1 class="text-4xl md:text-5xl font-semibold uppercase drop-shadow-lg">Terms & Conditions</h1>
+        </div>
+    </section>
+
+    <section class="py-16 lg:py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl text-gray-600 leading-relaxed text-sm md:text-base">
+            <div class="reveal">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6 font-primary uppercase tracking-wider">Acceptance of
+                    Terms</h2>
+                <p class="mb-8">By accessing and using this website, you agree to comply with and be bound by the
+                    following terms and conditions. If you do not agree with any part of these terms, please do not use
+                    our website.</p>
+            </div>
+
+            <div class="reveal">
+                <h2 class="text-xl font-bold text-gray-800 mb-4 font-primary uppercase tracking-wider">Use of the
+                    Website</h2>
+                <p class="mb-4">The content provided on this website is for informational purposes related to the Kala
+                    Point Condominium Association. You agree to use the site only for lawful purposes and in a way that
+                    does not infringe the rights of others.</p>
+                <p class="mb-8">Unauthorized use of this website may give rise to a claim for damages and/or be a
+                    criminal offense.</p>
+            </div>
+
+            <div class="reveal">
+                <h2 class="text-xl font-bold text-gray-800 mb-4 font-primary uppercase tracking-wider">Intellectual
+                    Property</h2>
+                <p class="mb-8">All content, including text, graphics, logos, and images on this website, is the
+                    property of Kala Point Condominium Association or its content suppliers and is protected by
+                    international copyright laws.</p>
+            </div>
+
+            <div class="reveal">
+                <h2 class="text-xl font-bold text-gray-800 mb-4 font-primary uppercase tracking-wider">Limitation of
+                    Liability</h2>
+                <p class="mb-8">Kala Point Condominium Association will not be liable for any damages arising from the
+                    use of this website. We make no warranty that the website will be error-free or uninterrupted.</p>
+            </div>
+
+            <div class="reveal">
+                <h2 class="text-xl font-bold text-gray-800 mb-4 font-primary uppercase tracking-wider">Changes to Terms
+                </h2>
+                <p class="mb-8">We reserve the right to modify these terms and conditions at any time. Your continued
+                    use of the website after any changes indicates your acceptance of the new terms.</p>
+            </div>
+
+            <div class="reveal">
+                <h2 class="text-xl font-bold text-gray-800 mb-4 font-primary uppercase tracking-wider">Governing Law
+                </h2>
+                <p class="mb-8">These terms and conditions are governed by and construed in accordance with the laws of
+                    the State of Washington, and any disputes will be subject to the exclusive jurisdiction of the
+                    courts of that State.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#192D38] text-white pt-12 pb-12 px-4 md:px-12 border-t border-white/5">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 max-w-5xl">
+            <div class="space-y-6 text-center md:text-left">
+                <img src="assets/logo-dark.jpeg" alt="Footer Logo"
+                    class="h-20 w-auto brightness-110 mb-4 inline-block md:block">
+                <p class="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto md:mx-0">Winter is when we take stock,
+                    reviewing maintenance needs and coordinating with vendors.</p>
+            </div>
+            <div class="text-center md:text-left">
+                <h3
+                    class="text-lg font-bold mb-6 relative pb-2 inline-block md:block border-b-2 border-secondary lg:border-none">
+                    Quick Links</h3>
+                <ul class="space-y-3 text-gray-400 text-sm">
+                    <li><a href="index.html" class="hover:text-secondary transition-colors">Home</a></li>
+                    <li><a href="about.html" class="hover:text-secondary transition-colors">About Community</a></li>
+                    <li><a href="about.html#board" class="hover:text-secondary transition-colors">Board of Directors</a>
+                    </li>
+                    <li><a href="newsletter.html" class="hover:text-secondary transition-colors">Newsletters</a></li>
+                    <li><a href="governing-documents.html" class="hover:text-secondary transition-colors">Governing
+                            Documents</a></li>
+                </ul>
+            </div>
+            <div class="text-center md:text-left">
+                <h3
+                    class="text-lg font-bold mb-6 relative pb-2 inline-block md:block border-b-2 border-secondary lg:border-none">
+                    Other Links</h3>
+                <ul class="space-y-3 text-gray-400 text-sm">
+                    <li><a href="privacy-policy.html" class="hover:text-secondary transition-colors">Privacy Policy</a>
+                    </li>
+                    <li><a href="terms-conditions.html"
+                            class="hover:text-secondary transition-colors font-bold text-white">Terms & Conditions</a>
+                    </li>
+                    <li><a href="copyright.html" class="hover:text-secondary transition-colors">Copyright</a></li>
+                </ul>
+            </div>
+            <div class="text-center md:text-left font-medium">
+                <h3
+                    class="text-lg font-bold mb-6 relative pb-2 inline-block md:block border-b-2 border-secondary lg:border-none">
+                    Contact Info</h3>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li class="flex items-start justify-center md:justify-start"><i
+                            class="fas fa-map-marker-alt mt-1 mr-3 text-secondary"></i><span>123 Kala Point Road, Port
+                            Townsend, WA 98368</span></li>
+                    <li class="flex items-center justify-center md:justify-start"><i
+                            class="fas fa-phone mr-3 text-secondary"></i><span>(123) 456-7890</span></li>
+                    <li class="flex items-center justify-center md:justify-start"><i
+                            class="fas fa-envelope mr-3 text-secondary"></i><span>info@kalapointcondos.com</span></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <footer class="bg-[#111E24] py-6 px-4">
+        <div class="container max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-gray-400 text-sm">© 2024 Copyright Reserved | KPCA Powered</p>
+            <div class="flex space-x-3">
+                <a href="#"
+                    class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center hover:scale-110 transition-transform"><i
+                        class="fab fa-facebook-f text-sm"></i></a>
+                <a href="#"
+                    class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center hover:scale-110 transition-transform"><i
+                        class="fab fa-twitter text-sm"></i></a>
+                <a href="#"
+                    class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center hover:scale-110 transition-transform"><i
+                        class="fab fa-instagram text-sm"></i></a>
+                <a href="#"
+                    class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center hover:scale-110 transition-transform"><i
+                        class="fab fa-linkedin-in text-sm"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            $('#mobile-menu-btn').on('click', function () { $('#main-nav').toggleClass('hidden'); $(this).find('i').toggleClass('fa-bars fa-times'); });
+            const observerOptions = { root: null, threshold: 0.1, rootMargin: '0px' };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('active'); observer.unobserve(entry.target); } });
+            }, observerOptions);
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

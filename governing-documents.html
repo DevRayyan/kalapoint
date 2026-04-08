@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Governing Documents - Kala Point Condominium Association</title>
-    <link rel="icon" type="image/jpeg" href="assets/logo-light.jpeg">
+    <link rel="icon" type="image/jpeg" href="assets/logo-light.jpeg?v=3">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Inter & Playfair Display -->
@@ -76,7 +76,7 @@
             <div
                 class="py-4 px-4 lg:pr-10 flex items-center justify-between lg:justify-center bg-white lg:min-w-[300px]">
                 <a href="index.html">
-                    <img src="assets/logo-light.jpeg" alt="Kala Point Logo" class="h-16 lg:h-32 w-auto">
+                    <img src="assets/logo-light.jpeg?v=3" alt="Kala Point Logo" class="h-16 lg:h-32 w-auto">
                 </a>
                 <button id="mobile-menu-btn" class="lg:hidden text-primary text-2xl focus:outline-none">
                     <i class="fas fa-bars"></i>
@@ -134,7 +134,7 @@
     <section
         class="relative h-[200px] md:h-[250px] flex items-center justify-center text-center text-white overflow-hidden">
         <div class="absolute inset-0 bg-center hero-gradient flex items-center justify-center"
-            style="background-image:url('assets/hero-bg.jpeg'); background-size: cover; background-position: top;">
+            style="background-image:url('assets/hero-bg.jpeg?v=3'); background-size: cover; background-position: top;">
             <!-- <div class="absolute inset-0 bg-primary/20"></div> -->
         </div>
         <div class="relative z-10 w-full py-10 reveal bg-gradient-to-r from-primary via-primary to-transparent">
@@ -153,6 +153,23 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 max-w-4xl mx-auto">
+                <div
+                    class="bg-[#FBFBFB] border border-gray-300 p-8 flex items-start gap-6 doc-card reveal reveal-delay-1">
+                    <div class="relative">
+                        <i class="fa-regular fa-calendar-check text-7xl text-gray-600"></i>
+                        <div
+                            class="absolute -bottom-1 -right-3 bg-gray-600 rounded-full w-10 h-10 flex items-center justify-center border-2 border-white">
+                            <i class="fas fa-clock text-[30px] text-white"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">KPCA Rules & Regulations</h3>
+                        <p class="text-gray-500 text-sm mb-4">Amended February 2018</p>
+                        <a href="assets/docs/KPCA-Rules-and-Regulations.pdf" target="_blank"
+                            class="inline-flex items-center bg-[#206194] text-white px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wider">Download
+                            PDF</a>
+                    </div>
+                </div>
                 <!-- Card 1 -->
                 <div class="bg-[#FBFBFB] border border-gray-300 p-8 flex items-start gap-6 doc-card reveal">
                     <div class="relative">
@@ -163,9 +180,9 @@
                         </div>
                     </div>
                     <div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Rules & Regulations</h3>
-                        <p class="text-gray-500 text-sm mb-4">Download Rules & Regulations</p>
-                        <a href="#"
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">KPCA Articles of Incorporation</h3>
+                        <!-- <p class="text-gray-500 text-sm mb-4">Download Rules & Regulations</p> -->
+                        <a href="assets/docs/KPCA-Articles-of-Incorporation.pdf" target="_blank"
                             class="inline-flex items-center bg-[#206194] text-white px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wider">Download
                             PDF</a>
                     </div>
@@ -178,9 +195,9 @@
                         <i class="fa-solid fa-gavel text-7xl text-gray-600"></i>
                     </div>
                     <div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Bylaws</h3>
-                        <p class="text-gray-500 text-sm mb-4">Download Bylaws</p>
-                        <a href="#"
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">KPCA Bylaws</h3>
+                        <p class="text-gray-500 text-sm mb-4">Update 2018</p>
+                        <a href="assets/docs/Bylaws-Update(2018).pdf" target="_blank"
                             class="inline-flex items-center bg-[#206194] text-white px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wider">Download
                             PDF</a>
                     </div>
@@ -196,16 +213,16 @@
                         </div>
                     </div>
                     <div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">HOA Policies</h3>
-                        <p class="text-gray-500 text-sm mb-4">View Policies</p>
-                        <a href="#"
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">KPCA CCRs - Declarations</h3>
+                        <!-- <p class="text-gray-500 text-sm mb-4">View Policies</p> -->
+                        <a href="assets/docs/KPCA-CCRs-Declarations.pdf" target="_blank"
                             class="inline-flex items-center bg-[#206194] text-white px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wider">Download
                             PDF</a>
                     </div>
                 </div>
 
                 <!-- Card 4 -->
-                <div
+                <!-- <div
                     class="bg-[#FBFBFB] border border-gray-300 p-8 flex items-start gap-6 doc-card reveal reveal-delay-1">
                     <div class="relative">
                         <i class="fa-regular fa-calendar-check text-7xl text-gray-600"></i>
@@ -221,11 +238,11 @@
                             class="inline-flex items-center bg-[#206194] text-white px-6 py-2 rounded-md text-xs font-semibold uppercase tracking-wider">Download
                             PDF</a>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <!-- Wide Card -->
-            <div
+            <!-- <div
                 class="bg-[#FBFBFB] max-w-4xl mx-auto border border-gray-300 p-10 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 reveal mb-10 text-center">
                 <div class="flex  gap-4">
                     <div class="">
@@ -239,10 +256,10 @@
                             All Documents</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Quick Links -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-0 border-t border-gray-300 pt-10 max-w-4xl mx-auto reveal">
+            <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-0 border-t border-gray-300 pt-10 max-w-4xl mx-auto reveal">
                 <div class="p-8 border-b md:border-b-0 md:border-r border-gray-300 flex gap-5 justify-center">
                     <div class="">
                         <i class="fas fa-file-contract text-primary text-4xl"></i>
@@ -268,14 +285,14 @@
                             Condos for Sale</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
     <!-- Signup Section -->
     <section class="relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] px-4 overflow-visible">
         <div class="absolute inset-0 z-0 h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden">
-            <img src="assets/signup-bg.png" alt="Pier View" class="w-full">
+            <img src="assets/signup-bg.png?v=3" alt="Pier View" class="w-full">
         </div>
 
         <div class="container mx-auto absolute bottom-0 left-0 right-0 z-10 reveal">
@@ -283,7 +300,7 @@
                 class="bg-white/90 backdrop-blur-md p-6 lg:p-10 !py-6 max-w-4xl mx-auto rounded-sm border-4 lg:border-8 border-secondary flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8 shadow-2xl translate-y-1/2">
                 <div class="flex-1 min-w-[280px] text-center lg:text-left">
                     <h2 class="text-xl lg:text-2xl font-serif text-primary font-bold mb-1">Newsletter Sign Up</h2>
-                    <p class="text-primary text-sm">Stay updated with our latest community news.</p>
+                    <p class="text-primary text-sm">Notification our best deals...</p>
                 </div>
                 <form class="flex-1 w-full lg:min-w-[300px] flex flex-col sm:flex-row gap-2">
                     <input type="email" placeholder="Enter your email"
@@ -301,10 +318,11 @@
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 max-w-5xl">
             <div class="space-y-6 text-center md:text-left">
                 <div class="flex justify-center md:justify-start">
-                    <img src="assets/logo-dark.jpeg" alt="Footer Logo" class="h-24 w-auto brightness-110">
+                    <img src="assets/logo-dark.jpeg?v=3" alt="Footer Logo" class="h-24 w-auto brightness-110">
                 </div>
                 <p class="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto md:mx-0">
-                    Winter is when we take stock. reviewing maintainance needs coordinating with vendors.
+                    Our Kala Point condominium community is shaped by care, steady stewardship, and a strong sense of
+                    the Peninsula we call home.
                 </p>
             </div>
 
